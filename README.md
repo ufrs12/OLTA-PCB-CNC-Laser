@@ -1,2 +1,8 @@
-# OLTA-PCB-CNC-Laser-Cinematics
-OLTA PCB CNC Laser Cinematics
+# OLTA PCB CNC Laser
+
+Проект можно описать следующей структурой:
+1. Кинематика
+⋅⋅*Ненумерованный вложенный список.
+3. Электроника
+4. Софт
+5. Лазерный модуль
