@@ -1,5 +1,13 @@
 # OLTA PCB CNC Laser
 
+<p align="center">
+ <img width="700px" src="src/Перед.jpg" alt="qr"/>
+</p>
+
+<p align="center">
+ <img width="700px" src="src/Зад.jpg" alt="qr"/>
+</p>
+
 Проект можно описать следующей структурой:
 1. Кинематика  
    -- Станина  
