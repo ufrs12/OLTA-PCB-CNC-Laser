@@ -14,5 +14,5 @@
    -- Прошивка FluidNC (Hardware)  
    -- Конфигурационный файл FluidNC (Hardware)  
    -- Сендер (Software)  
-   -- CAM  
+   -- CAM  (Software)
 7. Лазерный модуль  
