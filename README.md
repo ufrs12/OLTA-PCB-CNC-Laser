@@ -24,7 +24,7 @@
    -- Конфигурационный файл FluidNC (Hardware)  
    -- Сендер (Software)  
    -- CAM  (Software)
-4. Лазерный модуль
+4. [Лазерный модуль](https://github.com/ufrs12/OLTA-PCB-CNC-Laser/tree/main/Laser)
 5. Тестовые и настроечные G-коды.
 
 Характеристики:
