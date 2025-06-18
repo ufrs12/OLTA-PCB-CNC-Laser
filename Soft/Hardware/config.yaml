@@ -10,12 +10,12 @@ stepping:
   segments: 12
 
 spi:
-  miso_pin: NO_PIN
-  mosi_pin: NO_PIN
-  sck_pin: NO_PIN
+  miso_pin: gpio.19
+  mosi_pin: gpio.23
+  sck_pin: gpio.18
 
 sdcard:
-  cs_pin: NO_PIN
+  cs_pin: gpio.5
   card_detect_pin: NO_PIN
   frequency_hz: 8000000
 
@@ -28,37 +28,57 @@ axes:
   homing_runs: 2
   x:
     steps_per_mm: 80.000000
-    max_rate_mm_per_min: 600.000000
-    acceleration_mm_per_sec2: 25.000000
-    max_travel_mm: 1000.000000
-    soft_limits: false
+    max_rate_mm_per_min: 20000.000000
+    acceleration_mm_per_sec2: 1000.000000
+    max_travel_mm: 101.000000
+    soft_limits: true
     motor0:
-      limit_neg_pin: gpio.34
-      limit_pos_pin: gpio.35
+      limit_neg_pin: gpio.34:low
+      limit_pos_pin: gpio.35:low
       limit_all_pin: NO_PIN
-      hard_limits: false
-      pulloff_mm: 1.000000
+      hard_limits: true
+      pulloff_mm: 2.000000
       stepstick::
         step_pin: gpio.12
         direction_pin: gpio.14
         disable_pin: NO_PIN
+    homing:
+      cycle: 1
+      allow_single_axis: true
+      positive_direction: false
+      mpos_mm: 0.000000
+      feed_mm_per_min: 2000.000000
+      seek_mm_per_min: 1500.000000
+      settle_ms: 250
+      seek_scaler: 1.100000
+      feed_scaler: 1.100000
 
   y:
-    steps_per_mm: 34.000000
+    steps_per_mm: 480.000000
     max_rate_mm_per_min: 100.000000
     acceleration_mm_per_sec2: 25.000000
-    max_travel_mm: 1000.000000
-    soft_limits: false
+    max_travel_mm: 32.000000
+    soft_limits: true
     motor0:
-      limit_neg_pin: NO_PIN
-      limit_pos_pin: NO_PIN
+      limit_neg_pin: gpio.25:low
+      limit_pos_pin: gpio.33:low
       limit_all_pin: NO_PIN
-      hard_limits: false
+      hard_limits: true
       pulloff_mm: 1.000000
       stepstick::
         step_pin: gpio.27
         direction_pin: gpio.26
         disable_pin: NO_PIN
+    homing:
+      cycle: 1
+      allow_single_axis: true
+      positive_direction: false
+      mpos_mm: 0.000000
+      feed_mm_per_min: 700.000000
+      seek_mm_per_min: 1000.000000
+      settle_ms: 250
+      seek_scaler: 1.100000
+      feed_scaler: 1.100000
 
   z:
     steps_per_mm: 80.000000
@@ -162,10 +182,10 @@ use_line_numbers: false
 planner_blocks: 16
 
 Laser:
-  pwm_hz: 5000
+  pwm_hz: 1000
   output_pin: gpio.32
-  enable_pin: gpio.33
+  enable_pin: NO_PIN
   disable_with_s0: false
   s0_with_disable: true
   tool_num: 0
-  speed_map: 0=0.000% 255=100.000%
+  speed_map: 0=0.000% 100=100.000%
